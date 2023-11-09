@@ -90,9 +90,9 @@ def get_label_using_logits(logits,vocabulary_index2word_label,top_number=5):
     return label_list
 
 # write question id and labels to file system.
-def write_question_id_with_labels(question_id,labels_list,f):
+def write_question_id_with_labels(ques_id,labels_list,f):
     labels_string=",".join(labels_list)
-    f.write(question_id+","+labels_string+"\n")
+    f.write(ques_id+","+labels_string+"\n")
 
 if __name__ == "__main__":
     tf.app.run()
